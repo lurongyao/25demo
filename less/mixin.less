@@ -1,0 +1,60 @@
+@charset "utf-8";
+/*mixin 混入 */
+
+/*样式混入*/
+/*.w50{
+  width: 50%;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.bl{
+  border: 1px solid #ccc;
+}
+.br{
+  border: 1px solid #ccc;
+}*/
+
+/*得到一个%50宽度左浮动右边框*/
+/*
+.w50FlBr{
+  .w50();
+  .fl();
+  .br();
+}
+*/
+
+/*函数混入*/
+/*less怎么定义一个函数*/
+/*js var a = function(){}*/
+.float(@float:left){
+  float: @float;
+}
+.border(@de:left){
+  //如果要拼接字符串
+  border-@{de}: 1px solid #ccc;
+}
+
+/*右浮动右边框*/
+.flBr{
+  .float(right);
+  .border(top);
+}
+
+
+/*兼容行比较好的圆角函数  200px圆角的边框属性*/
+.br200{
+  .border-radius(200px);
+}
+
+.border-radius(@width:100px){
+  border-radius: @width;
+  -webkit-border-radius: @width;
+  -moz-border-radius:@width;
+  -ms-border-radius: @width;
+  -o-border-radius: @width;
+}
+

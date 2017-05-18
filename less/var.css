@@ -1,0 +1,7 @@
+@charset "utf-8";
+/*这样的注释是会编译到css文件当中的 */
+/*定义变量*/
+a:hover {
+  color: #e92322;
+  border: 1px solid #e92322;
+}

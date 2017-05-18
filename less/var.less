@@ -1,0 +1,17 @@
+@charset "utf-8";
+/*这样的注释是会编译到css文件当中的 */
+//less可以使用，但是没有编译到css文件当中
+
+
+/*定义变量*/
+// var a = 10;
+@wjsMainColor:#e92322;
+//必须以@开头   不能以数字开头  不能包含特殊字符
+
+a:hover{
+  color: @wjsMainColor;
+  border: 1px solid @wjsMainColor;
+}
+
+
+
